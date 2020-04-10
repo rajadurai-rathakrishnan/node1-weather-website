@@ -9,7 +9,7 @@ const forecast = function (lati,long,callback)
        } else if (body.message){
          callback(body.message,undefined)
        } else {
-        callback(undefined,body.weather[0].description)
+        callback(undefined,body)
        }
     })
 }

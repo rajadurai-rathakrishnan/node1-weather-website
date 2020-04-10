@@ -66,7 +66,16 @@ app.get('/weather',(req,res)=>{
                 Longitude: longitude,
                 place: location,
                 address: req.query.address,
-                forecast:forecastdata
+                Weather_main:forecastdata.weather[0].main,
+                Weather_description:forecastdata.weather[0].description,
+                Weather_temp:forecastdata.main.temp,
+                Weather_feellike:forecastdata.main.feels_like,
+                Weather_pressure:forecastdata.main.pressure,
+                Weather_humidity:forecastdata.main.humidity,
+                Weather_windspeed:forecastdata.wind.speed,
+                Weather_winddeg:forecastdata.wind.deg,
+                PlaceLocLoc:forecastdata.coord.lon,
+                PlaceLocLat:forecastdata.coord.lat
             })
         })                      
     })
