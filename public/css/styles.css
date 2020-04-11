@@ -9,7 +9,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color:#bfccd9;
-    background-image: url(/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
