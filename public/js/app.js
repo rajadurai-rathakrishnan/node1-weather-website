@@ -38,19 +38,24 @@ WeatherForm.addEventListener('submit',(e)=> {
             WeatherMessage7.textContent = ''
             WeatherMessage8.textContent = ''
             WeatherMessage9.textContent = ''
-            WeatherMessage10.textContent = ''
+           // WeatherMessage10.textContent = ''
         } else {           
-            //console.log (data.forecast) 
-            WeatherMessage1.textContent = 'The todays weather forecast of ' + data.place + ' is ' + data.Weather_description 
-            WeatherMessage2.textContent = 'The geographical location is ' + data.PlaceLocLat +', ' + data.PlaceLocLoc
-            WeatherMessage3.textContent = 'Temperature is ' + data.Weather_temp
-            WeatherMessage4.textContent = 'Temperature feels like ' + data.Weather_feellike
-            WeatherMessage5.textContent = 'Pressure is ' + data.Weather_pressure
-            WeatherMessage6.textContent = 'Humidity is ' + data.Weather_humidity
-            WeatherMessage7.textContent = 'Wind speed is ' + data.Weather_windspeed
-            WeatherMessage8.textContent = 'Wind deg is ' + data.Weather_winddeg
-            WeatherMessage9.textContent = ''
-            WeatherMessage10.textContent = ''
+            //console.log (data.forecast)             
+
+            WeatherMessage1.textContent =  data.place
+            WeatherMessage2.textContent =  data.Weather_description 
+            WeatherMessage3.textContent =  data.PlaceLocLat +', ' + data.PlaceLocLoc
+            const sTem = data.Weather_temp - 273.15
+            const n = sTem.toFixed(2)
+            WeatherMessage4.textContent =  data.Weather_temp + ' K | ' + n + ' C'
+            const sTemp = data.Weather_feellike - 273.15
+            const n1 = sTemp.toFixed(2)
+            WeatherMessage5.textContent =  data.Weather_feellike + ' K | '+ n1 + ' C'
+            WeatherMessage6.textContent =  data.Weather_pressure + ' mbar'
+            WeatherMessage7.textContent =  data.Weather_humidity + ' %'
+            WeatherMessage8.textContent =  data.Weather_windspeed + ' m/s'
+            WeatherMessage9.textContent = data.Weather_winddeg
+           // WeatherMessage10.textContent = ''
         }                
     })
 })

@@ -2,14 +2,14 @@
 body {
     color: #333333;
     font-family: Arial;
-    max-width: 650px;
+    max-width: 80%;
     margin:0 auto;
     padding:0 16px;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
     background-color:#bfccd9;
-    background-image: url(/img/beauty.jpg);
+    background-image: url(/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -19,7 +19,7 @@ body {
         flex-grow: 1;
     }
 footer {
-    color:#888888;
+    color:white;
     border-top: 1px solid #eeeeee;
     margin-top: 16px;
     padding : 16px 0;
@@ -28,6 +28,7 @@ footer {
 header {
     margin-top :16px;
     margin-bottom: 48px;
+    color:White
 }
 
 h1{
@@ -36,7 +37,7 @@ h1{
 }
 
 header a {
-    color :#888888;
+    color: white;
     margin-right:16px;
     text-decoration: none;
 }
@@ -48,6 +49,7 @@ header a {
 input {
     border:1px solid #cccccc;
     padding:8px;
+    width: 250px;
 }
 
 button{
@@ -56,4 +58,32 @@ button{
     background: #888888;
     color:white;
     padding:8px;
+    width: 95px;
 }
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+  p {
+      padding: 0%;
+      color: White;
+  }
